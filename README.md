@@ -1,17 +1,18 @@
-# Practical Gremlin: An Apache TinkerPop Tutorial
+# Gremlin Práctico: Un tutorial de Apache TinkerPop
 
 
-![map](https://github.com/krlawrence/graph/raw/master/images/GremlinEaselNoText.png?raw=true, "graph picture")
+![map](https://github.com/isaactzab/graph/raw/master/images/GremlinEaselNoText.png?raw=true, "graph picture")
 
-## Welcome!
+## Bienvenido!
+El repositorio actual es un fork para traduccion en proceso del repositorio original. Posiblemente no contenga siempre las últimas actualizaciones. Proyecto abierto a colaboraciones.
 
-This repository is the new home for the source materials, sample code and examples for the book "Practical Gremlin - An Apache TinkerPop Tutorial"
+Este es un repositorio es el nuevo hogar para los materiales, pruebas y ejemplos del libro "Gremlin Práctico - Un tutorial de Apache TinkerPop"
 
-**Quick Start**  
+**Inicio Rápido**  
 
-To read the latest snapshot of the book right away in a browser (HTML format) click [here](http://kelvinlawrence.net/book/Gremlin-Graph-Guide.html) or for a PDF version click [here](http://kelvinlawrence.net/book/Gremlin-Graph-Guide.pdf). These snapshots are updated regularly. You will find other formats including MOBI, EPUB and XML (Docbook) in the [releases](https://github.com/krlawrence/graph/releases)  section. Formal releases will be published periodically assuming there is enough new material to make it worthwhile. If you want to see the absolute latest updates you can always browse the Asciidoc source file (Gremlin-Graph-Guide.adoc) in the /book folder. The PDF version is currently the "official" version. It has a better table of contents, some better formatting and a much nicer title page!
+Para leer en el navegador el último snapshot de el libro ahora mismo (Formato HTML) haga click [aquí](http://kelvinlawrence.net/book/Gremlin-Graph-Guide.html) o para ver una version PDF haga click [aquí](http://kelvinlawrence.net/book/Gremlin-Graph-Guide.pdf). Esos spanpshots son actualizados regularmente. Encontrarás otros formatos incluyendo MOBI, EPUB y XML (Docbook) en la sección de [releases](https://github.com/krlawrence/graph/releases). Los lanzamientos formales serán publicados periódicamente cuando se determine que hay suficiente material nuevo para que valga la pena. Si quieres ver la ultima absoluta actualización puedes navegar el archivo fuente Asciidoc (Gremlin-Graph-Guide.adoc) en la carpeta /book. Actualmente la versión oficial es la versión PDF. Esta tiene una mejor tabla de contenidos, un formato un poco mejor y un título mucho más agradable.
 
-**LATEST NEWS:**  
+**ÚLTIMAS NOTICIAS:**  
 
 [Apr-27-2019] Updated versions of the sample data and corresponding demo apps have been uploaded.  
 [Dec-26-2018] Revision 281 (TP 3.3.4) was just published in all formats. See [change history](https://github.com/krlawrence/graph/blob/master/ChangeHistory.md) for details.    
