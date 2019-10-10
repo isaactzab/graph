@@ -1,4 +1,4 @@
-PRACTICAL GREMLIN: An Apache TinkerPop Tutorial
+GREMLIN PRÁCTICO: Un tutorial de Apache TinkerPop
 ===============================================
 Kelvin R. Lawrence <gfxman@yahoo.com>
 //v281 (TP 3.3.5), January 28th 2019
@@ -63,75 +63,83 @@ v282-preview, August 28th 2019
 
 
 
-INTRODUCTION
+INTRODUCCIÓN
 ------------
                      
-.This book is a work in progress. Feedback is very much encouraged and welcomed!
+.Este libro es un trabajo en progreso. ¡La retroalimentación es muy incentivante y bienvenida!
 
-The title of this book could equally well be '"A getting started guide for users of
-graph databases and the Gremlin query language featuring hints, tips and sample
-queries"'. It turns out that is a bit too long to fit on one line for a heading
-but in a single sentence that describes the focus of this work pretty well.
+El título de este libro podría ser igualmente "Una guía de inicio para usuarios de
+bases de datos de grafos y el lenguaje de consulta de Gremlin con sugerencias, consejos 
+y muestras consultas "'. Resulta que es demasiado largo para caber en una línea para un
+encabezado pero en una sola oración que describe el enfoque de este trabajo bastante bien.
 
-I have resisted the urge to try and cover every single feature of TinkerPop one after
-the other in a reference manual fashion. Instead, what I have tried to do is capture
-the learning process that I myself have gone through using what I hope is a sensible
-flow from getting started to more advanced topics. To get the most from this book I
-recommend having the Gremlin console open with my sample data loaded as you follow
-along. I have not assumed that anyone reading this has any prior knowledge of Apache
-TinkerPop, the Gremlin query language or related tools. I will introduce everything
-you need to get started in Chapter 2.
+Me he resistido a la necesidad de tratar de cubrir cada característica de TinkerPop en un 
+manual de referencia una tras otra vez. En cambio, lo que he intentado hacer es capturar
+el proceso de aprendizaje por el que yo mismo he pasado usando lo que espero sea sensato
+fluya desde el comienzo hasta temas más avanzados. Para aprovechar al máximo este libro,
+recomiendo abra la consola Gremlin usando mis datos de muestrav a lo largo de su lectura.
+Asumo que el lector no tiene conocimientos previos de Apache TinkerPop, el lenguaje de 
+consulta Gremlin o herramientas las relacionadas. Comezaré a presentar todo lo necesario
+comenzar en el Capítulo 2.
 
-I hope people find what follows useful. It definitely remains a work in progress and
-more will be added in the coming weeks and months as time permits. I am hopeful that
-what is presented so far is of some use to anyone, who like me, is learning to use
-the Gremlin query and traversal language and related technologies.
+Espero que la gente encuentre útil lo que sigue. Definitivamente sigue siendo un trabajo
+en progreso y se agregará más en las próximas semanas y meses según lo permita el tiempo.
+Tengo la esperanza de que lo que se presenta hasta ahora es útil para cualquiera que, 
+como yo, esté aprendiendo a usar Gremlin Query, el lenguaje transversal y las tecnologías 
+relacionadas.
 
-A lot of additional material, including the book in many different formats such as
-PDF, HTML, ePub and MOBI as well as sample code and data, can be found at the
-https://github.com/krlawrence/graph[project's home on GitHub]. You will find a
-summary of everything that is available in the "<<samplesintro>>" section.
+Una gran cantidad de material adicional, incluido el libro en muchos formatos diferentes,
+como PDF, HTML, ePub y MOBI, así como código de muestra y datos, se pueden encontrar en
+https://github.com/krlawrence/graph la página de inicio del proyecto en GitHub]. 
+Encontrarás un resumen de todo lo que está disponible en la sección "<<samplesintro>>".
 
-How this book came to be
+De donde surgió este libro
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-I forget exactly when, but sometime early in 2016 I started compiling a list of
-notes, hints and tips, initially for my own benefit. My notes were full of things I
-had found poorly explained elsewhere while using graph databases and especially while
-using Apache TinkerPop, Gremlin and JanusGraph. Over time that document continued to
-grow and had effectively become a book in all but name. After some encouragement from
-colleagues I decided to release my notes as a 'living book' in an open source venue
-so that anyone who is interested can read it. It is definitely aimed at programmers
-and data scientists but I hope is also consumable by anyone using the Gremlin graph
-query and traversal language to work with graph databases. 
+No recuerdo exactamente cuando fue, pero en algun momento del 2016 comencé a compilar
+una lista de notas, claves y consejos, inicialmente para mi propio beneficio. Mis
+notas estaban llenas de cosas que tuve que encontrar pobremente explicadas en otras
+partes mientras utilizaba una base de datos de grafos y especialmente mientras utilizaba
+Apache TinkerPop, Gremlin y JanusGraph. Con el tiempo, el documento creció y efectivamente
+se convirtió en el libro sin nombre. Luego de un poco de ánimo de mis colegas decidí 
+publicar mis notas como un "living book" en formato de codigo abierto para que cualquiera
+interesado pueda leerlo. Definitivamente esta enfocado a programadores e científicos
+de datos, pero creo que puede ser leido por cualquiera que utiliza Gremlin graph query y
+el lenguaje traversal para trabajar con bases de datos de grafos.
 
-I have included a large number of code examples and sample queries along with
-discussions of best practices and more than a few lessons I learned the hard way,
-that I hope you will find informative. I call it a 'living book' as my goal is to
-regularly make updates as I discover things that need adding while also trying to
-keep the content as up to date as possible as Apache TinkerPop itself evolves.
+Incluyo una larga lista de codigos de ejemplos y muestras de consultas junto con debates
+sobre las buenas prácticas, así como algunas lecciones que he aprendido, que estoy
+seguro que encontrarás informativas. Le he llamado un "living book" por que mi objetivo
+principal es mantener actualizaciones conforme vaya descubriendo mas cosas que deberian 
+agregarse mientras que también a medida que Apache TinkerPop vaya evolucionando, mantener
+el contenido actualizado.
 
-I would like to say very heartfelt *Thank You* to all those that have encouraged me
-to keep going with this adventure! It has required quite a lot of work but also
-remains a lot of fun.
+!Quiero ser sincero diciendo "Gracias" a todos aquellos que me han animado a continuar
+con esta aventura!. Ha tomado mucho trabajo pero todavia queda "mucho por divertirnos"
 
 Kelvin R. Lawrence +
-First draft: October 5th, 2017 +
-Current draft: {draftdate} +
+Primer Borrador: 5 de Octubre de 2017 +
+Borrador Actual: {draftdate} +
 
-Providing feedback
+Retroalimentando
 ~~~~~~~~~~~~~~~~~~
+Porfavor, avisame si encuentras en este material errores; de igual manera sientete
+libre de enviar cualquier tipo de retroaliementación. Sugerencias y mejoras son 
+muy bien recibidas. Una buena forma de enviar retroalimentación es abrir un "issue"
+en el repositorio de GitHub que se encuentra en http://github.com/krlawrence/graph. 
+Actualmente estas leyendo este libro en la revision {revision}.
+
 Please let me know about any mistakes you find in this material and also please feel
 free to send me feedback of any sort. Suggested improvements are especially welcome.
 A good way to provide feedback is by opening an issue in the GitHub repository
 located at https://github.com/krlawrence/graph. You are currently reading revision
 {revision} of the book.
 
-I am grateful to those who have already taken the time to review the manuscript and 
-open issues or submit pull requests.
+Agradezco a quienes se han tomado el tiempo para revisar el manuscrito y han abierto
+"issues" o han enviado "pull requests".
 
-[[thanks]]
-Some words of thanks
+[[Gracias]]
+Algunas palabras de agradecimiento
 ~~~~~~~~~~~~~~~~~~~~
 
 I would like to thank my former colleagues, Graham Wallis, Jason Plurad and Adam
