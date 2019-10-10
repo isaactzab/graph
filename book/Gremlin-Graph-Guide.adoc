@@ -129,12 +129,6 @@ muy bien recibidas. Una buena forma de enviar retroalimentación es abrir un "is
 en el repositorio de GitHub que se encuentra en http://github.com/krlawrence/graph. 
 Actualmente estas leyendo este libro en la revision {revision}.
 
-Please let me know about any mistakes you find in this material and also please feel
-free to send me feedback of any sort. Suggested improvements are especially welcome.
-A good way to provide feedback is by opening an issue in the GitHub repository
-located at https://github.com/krlawrence/graph. You are currently reading revision
-{revision} of the book.
-
 Agradezco a quienes se han tomado el tiempo para revisar el manuscrito y han abierto
 "issues" o han enviado "pull requests".
 
@@ -241,24 +235,33 @@ Chapter 9 - FURTHER READING::
   tools and documentation for many of the topics and technologies covered in this book.
 
 [[samplesintro]]
-Introducing the book sources, sample programs and data
+Presentando las fuentes, programas ejemplos y datos utilizados en el libro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All work related to this project is being done in the open at GitHub. A list of where
-to find the key components is provided below. The examples in this book make use of a
-sample graph called 'air-routes' which contains a graph based on the world
-airline route network between over 3,370 airports.  The sample graph data, quite a
-bit of sample code and some larger demo applications can all be found at the same
-GitHub location that hosts the book manuscript.  You will also find releases of the
-the book in various formats (HTML, PDF, DocBook/XML, MOBI and EPUB) at the same GitHub
-location.  The sample programs include standalone Java, Groovy and Ruby examples as
-well as many examples that can be run from the Gremlin Console.  There are some
-differences between using Gremlin from a standalone program and from the Gremlin
-Console. The sample programs demonstrate several of these differences.  The sample
-applications area contains a full example HTML and JavaScript application that lets
-you explore the 'air-routes' graph visually. The home page for the GitHub project
-includes a README.md file to help you navigate the site. Below are some links to
-various resources included with this book.
+Todo el trabajo relacionado con este proyecto se realiza de forma abierta en GitHub.
+Abajo, se provee de una lista donde encontrarás los componentes claves. Los ejemplos
+en este libro utilizan un grafo de prueba llamado 'air-routes' que contiene un grafo
+basado en la red de mas de 3,370 aeropuertos y aerolineas del mundo. El grafo de ejemplo,
+tienen bastante codigo de muestra y algunas aplicaciones de ejemplo pueden ser
+encontradas en la misma ubicacion de GitHub que almacena el libro.
+En la misma ubicación encontrarás lanzamientos del libro en diversos formatos (HTML,
+PDF, DocBook/XML, MOBI y EPUB). Los programas de ejemplo incluyen Java (autónomo),
+Groovy y Ruby asi como otros muchos ejemplos que pueden funcionar en la consola de Gremlin.
+Hay algunas diferencias entre utilizar Gremlin de un programa autónomo y la consola
+de Gremlin. Los programas de ejemplo demuestran algunas de esas diferencias. El área
+de aplicaciones de ejemplo contiene un ejemplo completo de HTML y Javascript que te
+permitirá explorar las 'rutas aéreas' de forma gráfica. La página de inicio para el
+proyecto de GitHub incluye un archivo README.md que te ayudará a navegar en el sitio.
+Abajo encontrarás algunos recursos que se incluyeron en el libro.
+
+.Donde encontrar el libro, datos y ejemplos
+Proyecto::
+- https://github.com/krlawrence/graph
+Libro Manuscrito en formato Asciidoc::
+- Este archivo puede ser visto utilizando la interface web de GitHub. Este siempre
+presentará las mas nuevas actualizaciones.
+- https://github.com/isaactzab/graph/tree/master/book
+
 
 .Where to find the book, samples and data
 Project home::
