@@ -69,7 +69,7 @@ INTRODUCCIÓN
 .Este libro es un trabajo en progreso. ¡La retroalimentación es muy incentivante y bienvenida!
 
 El título de este libro podría ser igualmente "Una guía de inicio para usuarios de
-bases de datos de grafos y el lenguaje de consulta de Gremlin con sugerencias, consejos 
+bases de datos de Gráfos y el lenguaje de consulta de Gremlin con sugerencias, consejos 
 y muestras consultas "'. Resulta que es demasiado largo para caber en una línea para un
 encabezado pero en una sola oración que describe el enfoque de este trabajo bastante bien.
 
@@ -99,13 +99,13 @@ De donde surgió este libro
 No recuerdo exactamente cuando fue, pero en algun momento del 2016 comencé a compilar
 una lista de notas, claves y consejos, inicialmente para mi propio beneficio. Mis
 notas estaban llenas de cosas que tuve que encontrar pobremente explicadas en otras
-partes mientras utilizaba una base de datos de grafos y especialmente mientras utilizaba
+partes mientras utilizaba una base de datos de Gráfos y especialmente mientras utilizaba
 Apache TinkerPop, Gremlin y JanusGraph. Con el tiempo, el documento creció y efectivamente
 se convirtió en el libro sin nombre. Luego de un poco de ánimo de mis colegas decidí 
 publicar mis notas como un "living book" en formato de codigo abierto para que cualquiera
 interesado pueda leerlo. Definitivamente esta enfocado a programadores e científicos
 de datos, pero creo que puede ser leido por cualquiera que utiliza Gremlin graph query y
-el lenguaje traversal para trabajar con bases de datos de grafos.
+el lenguaje traversal para trabajar con bases de datos de Gráfos.
 
 Incluyo una larga lista de codigos de ejemplos y muestras de consultas junto con debates
 sobre las buenas prácticas, así como algunas lecciones que he aprendido, que estoy
@@ -158,7 +158,7 @@ it is about continues to evolve. Your help and support is very much appreciated.
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este libro es una introduccón a Apache TinkerPop 3 'Gremlin' graph query y lenguaje
-traversal, por medio de ejemplos realistas y características que los datos de grafos
+traversal, por medio de ejemplos realistas y características que los datos de Gráfos
 tendrían en el mundo real. Estos datos junto con los códigos de prueba y aplicaciones
 de ejemplo estan disponibles para descargar en el proyecto de GitHub así como muchos otros
 elementos. El grafo, 'air-routes', es un modelo de red de rutas de aerolíneas en el 
@@ -167,18 +167,18 @@ que presentamos funcionará sin que tener que modificarlo cargando en la console
 
 NOTE: Los ejemplos de este libro fueron probados utilizando la version {tpvercheck} Apache TinkerPop. Sin embargo, el trabajo continúa agregando nuevas características que seran lanzadas en el libro.
 
-ThinkerGrap es un grafo 'in-memmory', que quiere decir que nada se guarda automáticamente en el disco. Se entrega como parte de la descarga de Apache TinkerPop 3. El objetivo principal de este tutorial es permitir que alguien con poco o nulo conocimiento pueda levantar y utilizar rápidamente la consola de Gremlin y el grafo 'air-routes'. Más adelante, utilizando tecnologías como JanusGraph, Apache Cassandra, Gremlin Server y Elasticsearch, se discute cómo construir un almacenamiento de datos que sea escalable y persistente almacen de grafos que pueda ser atravezado utilizando consultas con Gremlin. También se discutirá sobre Java Standalone y las aplicaciones Groovy utilizando la consola Gremlin. Incluso también he agregado un par de ejemplos utilizando Ruby.
+ThinkerGrap es un grafo 'in-memmory', que quiere decir que nada se guarda automáticamente en el disco. Se entrega como parte de la descarga de Apache TinkerPop 3. El objetivo principal de este tutorial es permitir que alguien con poco o nulo conocimiento pueda levantar y utilizar rápidamente la consola de Gremlin y el grafo 'air-routes'. Más adelante, utilizando tecnologías como JanusGraph, Apache Cassandra, Gremlin Server y Elasticsearch, se discute cómo construir un almacenamiento de datos que sea escalable y persistente almacen de Gráfos que pueda ser atravezado utilizando consultas con Gremlin. También se discutirá sobre Java Standalone y las aplicaciones Groovy utilizando la consola Gremlin. Incluso también he agregado un par de ejemplos utilizando Ruby.
 
 NOTE: En las primeras secciones de este libro me enfoqué principalmente en mostrar los diferentes tipos de consultas que pueden ser realizadas utilizando Gremlin. No intenté mostrar todos los posibles resultados de cada una de estas consultas, pero los ejemplos mostrados han sido bien seleccionados. Se profundizará en estos aspectos en los capítulos 4, 5 y 6.
 
 .Cómo se organiza este libro.
 Capítulo 1 - INTRODUCCIÓN::
-- Se comienza haciendo una breve recapitulación de por qué nos interesa una Base de datos de Grafos y se discute unos buenos casos de uso. También se provee de enlaces a programas de prueba y otros recursos adicionales referenciados por este libro.
+- Se comienza haciendo una breve recapitulación de por qué nos interesa una Base de datos de Gráfos y se discute unos buenos casos de uso. También se provee de enlaces a programas de prueba y otros recursos adicionales referenciados por este libro.
 Capítulo 2 - INICIANDO::
 - En el Capítulo dos se presentan varios componentes de Apache TinkerPop así ocomo el archivo  `air-routes.graphml` en el cual se basa la mayor parte de los ejemplos de este libro.}
 Capítulo 3 - ESCRIBIENDO CONSULTAS EN GREMLIN::
 - En el Capítulo tres se ponen las cosas mas interesantes! Comenzamos a discutir sobre cómo utilizar el traversal Gremlin graph y el lenguaje de consulta para interrogar al grafo 'air-routes' utilizando una base de datos más tradicional y entonces mirando como SQL y Gremlin tienen similitudes en muchos aspectos y al mismo tiempo son diferentes en otros. El resto del capítulo se presentan varios métodos claves de Gremlin o de cómo son llamados a menudo '"Steps"'. En este capítulo enfoco principalmente en la lectura del grafo (sin agregar o remover cosas).
-Capítulo 4 - BEYOND BASIC QUERIES::
+Capítulo 4 - MÁS ALLÁ DE UNA SIMPLE CONSULTA::
 - En el Capítulo cuatro el enfoque se mueve más alla de solemente leer el grafo y describimos como agregar vértices (nodos), arístas (edges) y propiedades, así de cómo actualizarlos y eliminarlos. También se presenta una discusión de diversas buenas prácticas. En este capítulo también comenzamos a explorar algunos tópicos mas avanzados.
 Capítulo 5 - ALGUNAS CONSULTAS Y LOS RESULTADOS QUE GENERAN::
 - En el Capítulo cinco nos enfocamos en lo que se cubrión en capítulos anteriores para poder escribir consultas que tengan más sentido en el mundo real. Se presentan muchos ejemplos del resultado de ejecutar las consultas de este capítulo. También se comienzan a discutir tópicos como el análisis de distancias, distribución de rutas y de cómo escribir consultas geoespaciales.
@@ -205,7 +205,7 @@ Capítulo 9 - FURTHER READING::
 
 [[samplesintro]]
 Presentando las fuentes, programas ejemplos y datos utilizados en el libro
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Todo el trabajo relacionado con este proyecto se realiza de forma abierta en GitHub.
 Abajo, se provee de una lista donde encontrarás los componentes claves. Los ejemplos
@@ -258,7 +258,7 @@ Historial de cambios::
 
 [[tp34intro]]
 Unas palabras acerca de TinkerPop 3.4
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Una actualización importante de Apache TinkerPop, versión 3.4, se lanzó en enero de 2019. Los ejemplos en este libro han sido probados con TinkerPop 3.4 y he hecho un progreso significativo para agregar cobertura de todo lo que se agregó. Sin embargo, el libro aún no incluye la cobertura de cada nueva característica, cambio y desuso introducida con la versión TinkerPop 3.4.
 
@@ -266,42 +266,25 @@ Una actualización importante de Apache TinkerPop, versión 3.4, se lanzó en en
 NOTE: El historial de cambios contiene detalles de todo lo que ha sido agregado hasta ahora y se encuentra aquí: 
 https://github.com/krlawrence/graph/blob/master/ChangeHistory.md
 
-Tenga en cuenta también que, dado el alcance de la versión 3.4, puede pasar un tiempo antes de que todas las implementaciones de gráficos de proveedores y de código abierto que admiten Apache TinkerPop se hayan puesto al día con todas estas nuevas características.
+Tenga en cuenta también que, dado el alcance de la versión 3.4, puede pasar un tiempo antes de que todas las implementaciones de Gráfos de proveedores y de código abierto que admiten Apache TinkerPop se hayan puesto al día con todas estas nuevas características.
 
 NOTE: Los detalles completos de todas las nuevas características agregadas en la versión TinkerPop 3.4 se pueden encontrar en el siguiente enlace:
 https://github.com/apache/tinkerpop/blob/master/CHANGELOG.asciidoc
 
 Además de actualizar el libro, comencé un plan continuar agregando de forma incremental la cobertura de estas características a la carpeta `sample-code`. Las pruebas actualmente agregadas incluyen `nested-repeat.groovy` que demuestra el uso de la nueva capacidad de repetir pasos anidados. Se puede cargar y ejecutar desde la consola de Gremlin.
+
 [[whygraph]]
-Entonces, ¿qué es una base de datos de gráficos y por qué debería interesarme?
+Entonces, ¿qué es una base de datos de Gráfos y por qué debería interesarme?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This book is mainly intended to be a tutorial in working with Base de datos de Grafos and
-related technology using the Gremlin query language. However, it is worth spending
-just a few moments to summarize why it is important to understand what a graph
-database is, what some good use cases for graphs are and why you should care in a
-world that is already full of all kinds of SQL and NoSQL databases. In this book we
-are going to be discussing 'directed property graphs'. At the conceptual level these
-types of graphs are quite simple to understand. You have three basic building blocks.
-Vertices (often referred to as nodes), edges and properties. Vertices represent
-"things" such as people or places. Edges represent connections between those
-vertices, and properties are information added to the vertices and edges as needed.
-The 'directed' part of the name means that any edge has a direction. It goes 'out'
-from one vertex and 'in' to another. You will sometimes hear people use the word
-'digraph' as shorthand for 'directed graph'.  Consider the relationship "Kelvin knows
-Jack". This could be modeled as a vertex for each of the people and an edge for the
-relationship as follows. 
+Este libro está destinado principalmente a ser un tutorial sobre cómo trabajar con la Base de datos de Gráfos y la tecnología relacionada utilizando el lenguaje de consulta Gremlin. Sin embargo, vale la pena dedicar unos minutos a resumir por qué es importante comprender qué es una base de datos de Gráfos, cuáles son algunos casos de uso adecuados para los Gráfos y por qué debería importarle en un mundo que ya está lleno de todo tipo de SQL y Bases de datos NoSQL. En este libro vamos a discutir 'Gráfos de propiedad dirigida'. A nivel conceptual, estos tipos de Gráfos son bastante simples de entender. Tienes tres bloques de construcción básicos. Vértices (a menudo denominados nodos), aristas y propiedades. Los vértices representan "cosas" como personas o lugares. Las aristas representan conexiones entre esos vértices, y las propiedades son información agregada a los vértices y aristas según sea necesario. La parte de 'dirección' del nombre significa que cualquier arista tiene una dirección. Sale 'de un vértice y' entra 'a otro. Algunas veces escuchará a las personas usar la palabra 'dígrafo' como abreviatura de 'grafo dirigido'. Considere la relación "Kelvin conoce a Jack". Esto podría modelarse como un vértice para cada una de las personas y una ventaja para la relación de la siguiente manera.
 
 [.text-center]
 Kelvin -- knows -> Jack
 
-Note the arrow which implies the direction of the relationship. If we wanted to
-record the fact that Jack also admits to knowing Kelvin we would need to add a
-second edge from Jack to Kelvin. Properties could be added to each person to give
-more information about them. For example, my age might be a property on my vertex. 
+Tenga en cuenta la flecha que implica la dirección de la relación. Si quisiéramos registrar el hecho de que Jack también admite conocer a Kelvin, necesitaríamos agregar una segunda ventaja de Jack a Kelvin. Se podrían agregar propiedades a cada persona para dar más información sobre ellas. Por ejemplo, mi edad podría ser una propiedad en mi vértice.
 
-It turns out that Jack really likes cats. We might want to store that in our graph as
-well so we could create the relationship:
+Resulta que a Jack le gustan los gatos. Es posible que también queramos almacenar eso en nuestro grafo para poder crear la relación:
 
 [.text-center]
 Jack -- likes -> Cats
@@ -312,101 +295,31 @@ Kelvin know that likes cats?"
 [.text-center]
 Kelvin -- knows -> Jack -- likes -> Cats
 
-This is a simple example but hopefully you can already see that we are modelling our
-data the way we think about it in the real world. Armed with this knowledge you now
-have all of the basic building blocks you need in order to start thinking about how
-you might model things you are familiar with as a graph.
+Este es un ejemplo simple, pero espero que ya pueda ver que estamos modelando nuestros datos de la manera en que pensamos sobre ellos en el mundo real. Armado con este conocimiento, ahora tiene todos los componentes básicos que necesita para comenzar a pensar en cómo podría modelar cosas con las que está familiarizado como un gráfos.
 
-So getting back to the question "why should I care?", well, if something looks like a
-graph, then wouldn't it be great if we could model it that way. Many things in our
-everyday lives center around things that can very nicely be represented in a graph.
-Things such as your social and business nedosrks, the route you take to get to work,
-the phone nedosrk, airline route choices for trips you need to take are all great
-candidates. There are also many great business applications for Base de datos de Grafos and
-algorithms. These include recommendation systems, crime prevention and fraud
-detection to name but three.
+Entonces, volviendo a la pregunta "¿por qué debería importarme?", Bueno, si algo parece un gráfos, entonces, ¿no sería genial si pudiéramos modelarlo de esa manera? Muchas cosas en nuestra vida cotidiana se centran en cosas que se pueden representar muy bien en un gráfos. Cosas como sus redes sociales y comerciales, la ruta que toma para llegar al trabajo, las redes telefónicas, las opciones de rutas de aerolíneas para los viajes que necesita tomar son excelentes candidatos. También hay muchas aplicaciones comerciales excelentes para Base de datos de Gráfos y algoritmos. Estos incluyen sistemas de recomendación, prevención del delito y detección de fraude, por nombrar solo tres.
 
-The reverse is also true. If something does not feel like a graph then don't try to
-force it to be. Your videos are probably doing quite nicely living in the object
-store where you currently have them. A sales ledger system built using a relational
-database is probably doing just fine where it is and likewise a document store is
-quite possibly just the right place to be storing your documents. So "use the right
-tool for the job" remains as valid a phrase here as elsewhere. Where Base de datos de Grafos
-come into their own is when the data you are storing is intrinsically linked by its
-very nature, the air routes nedosrk used as the basis for all of the examples in
-this book being a perfect example of such a situation.
+Lo contrario también es cierto. Si algo no parece un gráfico, entonces no intentes forzarlo a serlo. Sus videos probablemente estén funcionando bastante bien en el store de objetos donde los tienes actualmente. Un sistema de contabilidad creado utilizando una base de datos relacional probablemente esté funcionando bien donde está y, de la misma manera, un store de documentos es posiblemente el lugar adecuado para almacenar sus documentos. Por lo tanto, "utilizar la herramienta adecuada para el trabajo" sigue siendo una frase tan válida aquí como en otros lugares. Cuando la Base de datos de Gráfos entra en juego es cuando los datos que están almacenando están intrínsecamente vinculados por su propia naturaleza, la red de rutas aéreas utilizada como base para todos los ejemplos en este libro son un ejemplo perfecto de tal situación.
 
-Those of you that looked at graphs as part of a computer science course are correct
-if your reaction was "Surely graphs have been around for ages, why is this considered
-new?". Indeed, Leonard Euler is credited with demonstrating the first graph problem
-and inventing the whole concept of "Graph Theory" all the way back in 1763 when he
-investigated the now famous "Seven Bridges of Koenigsberg" problem.
+Aquellos de ustedes que vieron gráfos como parte de un curso de informática son correctos si su reacción fue "Seguramente los gráfos han existido durante siglos, ¿por qué esto se considera nuevo?". De hecho, a Leonard Euler se le atribuye haber demostrado el primer problema gráfico e inventar todo el concepto de "teoría de gráfos" en 1763 cuando investigó el ahora famoso problema "Siete puentes de Koenigsberg".
 
-If you want to read a bit more about graph theory and its present-day application,
-you can find a lot of good information online. Here's a Wikipedia link to get you
-started: https://en.wikipedia.org/wiki/Graph_theory
+Si deseas leer un poco más sobre la teoría de gráfos y su aplicación actual, puede encontrar mucha buena información en línea. Aquí hay un enlace de Wikipedia para comenzar: https://en.wikipedia.org/wiki/Graph_theory
 
-So, given Graph Theory is anything but a new idea, why is it that only recently we
-are seeing a massive growth in the building and deployment of graph database systems
-and applications? At least part of the answer is that computer hardware and software
-has reached the point where you can build large big data systems that scale well for
-a reasonable price. In fact, it's even easier than ever to build the large systems
-because you don't have to buy the hardware that your system will run on when you use
-the cloud.
+Entonces, dada la teoría de gráfos no es una idea nueva, ¿por qué es que recientemente estamos viendo un crecimiento masivo en la construcción e implementación de sistemas y aplicaciones de bases de datos de gráfos? Al menos parte de la respuesta es que el hardware y el software de la computadora han llegado al punto en el que puede construir grandes sistemas de big data que se adaptan bien a un precio razonable. De hecho, es aún más fácil que nunca construir sistemas grandes porque no es necesario comprar el hardware con el que se ejecutará su sistema cuando puedes utilizar la nube.
 
-While you can certainly run a graph database on your laptop--I do just that every
-day--the reality is that in production, at scale, they are big data systems. Large
-graphs commonly have many billions of vertices and edges in them, taking up petabytes
-of data on disk. Graph algorithms can be both compute- and memory-intensive, and it
-is only fairly recently that deploying the necessary resources for such big data
-systems has made financial sense for more everyday uses in business, and not just in
-government or academia. Base de datos de Grafos are becoming much more broadly adopted across
-the spectrum, from high-end scientific research to financial nedosrks and beyond.
+Si bien ciertamente puede ejecutar una base de datos de gráfos en su computadora portátil, lo hago todos los días, la realidad es que, en la producción, a gran escala, hay enormes sistemas de datos. Los gráfos grandes suelen tener muchos miles de millones de vértices y aristas, ocupando petabytes de datos en el disco. Los algoritmos de gráfos pueden ser intensivos tanto en computación como en memoria, y es solo recientemente que la implementación de los recursos necesarios para sistemas de datos tan grandes ha tenido sentido financiero para usos más cotidianos en los negocios, y no solo en el gobierno o la academia. La base de datos de Gráfos se está adoptando de manera mucho más amplia en todo el espectro, desde investigaciones científicas de alto nivel hasta las redes financieras y más.
 
-Another factor that has really helped start this graph database revolution is the
-availability of high-quality open source technology.  There are a lot of great open
-source projects addressing everything from the databases you need to store the graph
-data, to the query languages used to traverse them, all the way up to visually
-displaying graphs as part of the user interface layer. In particular, it is so-called
-'property graphs' where we are seeing the broadest development and uptake. In a
-property graph, both vertices and edges can have properties (effectively, key-value
-pairs) associated with them. There are many styles of graph that you may end up
-building and there have been whole books written on these various design patterns,
-but the property graph technology we will be focused on in this book can support
-all of the most common usage patterns. If you hear phrases such as 'directed graph'
-and 'undirected graph', or 'cyclic' and 'acyclic' graph, and many more as you work
-with Base de datos de Grafos, a quick online search will get you to a place where you can get
-familiar with that terminology. A deep discussion of these patterns is beyond the
-scope of this book, and it's in no way essential to have a full background in
-graph theory to get productive quickly.
+Otro factor que realmente ha ayudado a iniciar esta revolución de la base de datos de gráfos es la disponibilidad de tecnología de código abierto de alta calidad. Hay muchos proyectos excelentes de código abierto que abordan todo, desde las bases de datos que necesita para almacenar los datos del gráfico, hasta los lenguajes de consulta utilizados para recorrerlos, hasta mostrar visualmente los gráfos como parte de la capa de interfaz de usuario. En particular, son los llamados 'property graphs' donde vemos un amplio desarrollo y aceptación. En un 'property graph', tanto los vértices como los bordes pueden tener asociadas propiedades (pares clave-valor). Hay muchos estilos de gráfos puedes construir y se han escrito libros completos sobre estos diversos patrones de diseño, pero la tecnología de 'property graphs' en la que nos centraremos en este libro puede admitir todos los patrones de uso más común. Si mientras trabajas en base de datos de gráfos escuchas frases como 'gráfo dirigido' y 'gráfo no dirigido', o 'gráfo cíclico' y 'acíclico', y muchas más, con una búsqueda en internet puedes familiarizarte con esa terminología. Una discusión profunda de estos patrones está más allá del alcance de este libro, y de ninguna manera es esencial tener una formación completa en teoría de grafos para ser productivo rápidamente.
 
-A third, and equally important, factor in the growth we are seeing in graph database
-adoption is the low barrier of entry for programmers. As you will see from the
-examples in this book, someone wanting to experiment with graph technology can
-download the Apache TinkerPop package and as long as Java 8 is installed, be up and
-running with zero configuration (other than doing an unzip of the files), in as
-little as five minutes.  Base de datos de Grafos do not force you to define schemas or
-specify the layout of tables and columns before you can get going and start building
-a graph.  Programmers also seem to find the graph style of programming quite
-intuitive as it closely models the way they think of the world.
-            
-Graph database technology should not be viewed as a "rip and replace" technology, but
-as very much complimentary to other databases that you may already have deployed. One
-common use case is for the graph to be used as a form of smart index into other data
-stores. This is sometimes called having a polyglot data architecture.
+Un tercer y no ménos importante factor en el incremento de adopción de la base de datos de gráfos es el fácil acceso de los programadores. Como verá en los ejemplos de este libro, alguien que quiera experimentar con la tecnología gráfos puede descargar el paquete Apache TinkerPop y, siempre que Java 8 esté instalado, y en tan solo cinco minutos estará en funcionamiento con configuración cero (aparte de descomprimir los archivos). Las Base de datos de Gráfos no obligan a definir esquemas o especificar el diseño de tablas y columnas antes de trabajar y construir gráfos. Los programadores también parecen encontrar estilos gráficos de programación bastante intuitivos, como son modelos cercanos a la forma en que se ve al mundo real.
+
+La tecnología de Bases de datos de Gráfos no deberia ser vista como una tecnología de "quitar y reemplazar", mas bien como un complemento a otras bases de datos ya implementadas. Un caso de uso común es que el gráfo se utilice como una especie de índice inteligente entre otros almacenes de datos. A menudo este tipo de configuración se le llama arquitectura de datos políglota.
 
 [[nodevert]]
-A word about terminology
-~~~~~~~~~~~~~~~~~~~~~~~~
+Algo sobre la terminología
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The words 'node' and 'vertex' are synonymous when discussing a graph. Throughout this
-book you will find both words used. However, as the Apache TinkerPop documentation
-almost exclusively uses the word 'vertex', as much as possible when discussing
-Gremlin queries and other concepts, I will endeavor to stick to the word 'vertex' or
-the plural form 'vertices'. As this book has evolved I realized my use of these
-terms had become inconsistent and in future updates I plan, with a few exceptions
-such as when discussing binary trees, to standardize on 'vertex'
-rather than 'node' to be consistent with the TinkerPop documentation.
+Cuando hablamos de gráfos, las palabras 'nodo' y 'vértice' son sinónimos. A lo largo de este libro encontrará que se utilizan ambas. Sin embargo, como la documentación de Apache TinkerPop usa casi exclusivamente la palabra 'vértice', tanto como sea posible cuando se discuten las consultas de Gremlin y otros conceptos, trataré de utilizar la palabra 'vértice' o la forma plural 'vértices'. Con la evolución de este libro, me di cuenta de que mi uso de estos términos se había vuelto inconsistente y en futuras actualizaciones planeo, con algunas excepciones, como cuando se trata de árboles binarios, estandarizar el 'vértice' en lugar del 'nodo' para ser consistente con la documentación oficial de TinkerPop.
 
 [[gs]]
 GETTING STARTED
@@ -450,11 +363,11 @@ Useful Recipes::
 - A set of examples or "recipes" showing how to perform common graph oriented tasks using Gremlin queries.
 - http://tinkerpop.apache.org/docs/current/recipes/
 
-The programming interfaces allow providers of Base de datos de Grafos to build systems that
+The programming interfaces allow providers of Base de datos de Gráfos to build systems that
 are TinkerPop enabled and allow application programmers to write programs that talk
 to those systems.
 
-Any such TinkerPop enabled Base de datos de Grafos can be accessed using the Gremlin query
+Any such TinkerPop enabled Base de datos de Gráfos can be accessed using the Gremlin query
 language and corresponding API. We can also use the TinkerPop API to write client
 code in languages like Java that can talk to a TinkerPop enabled graph.  For most of
 this book we will be working within the Gremlin console with a local graph. However
@@ -1331,12 +1244,12 @@ will be familiar with if you have used SQL before, but again, prior knowledge of
 is in no way required to learn Gremlin.
 
 One thing you will not find when working with a graph using Gremlin is the concept of
-a SQL 'join'.  Base de datos de Grafos by their very nature avoid the need to join things
+a SQL 'join'.  Base de datos de Gráfos by their very nature avoid the need to join things
 together (as things that need to be connected already are connected) and this is a
-core reason why, for many use cases, Base de datos de Grafos are a very good choice and can
+core reason why, for many use cases, Base de datos de Gráfos are a very good choice and can
 be more performant than relational databases.                           
 
-Base de datos de Grafos are usually a good choice for storing and modelling nedosrks.  The
+Base de datos de Gráfos are usually a good choice for storing and modelling nedosrks.  The
 'air-routes' graph is an example of a nedosrk graph. A social nedosrk is of course
 another good example. Nedosrks can be modelled using relational databases too but as
 you explore the nedosrk and ask questions like "who are my friends' friends?" in a
@@ -1412,17 +1325,17 @@ take to get there.
 
 Again, don't worry if some of the Gremlin steps shown here are confusing, we will
 cover them all in detail a bit later. The key point to take away from this discussion
-of SQL and Gremlin is that for data that is very connected, Base de datos de Grafos provide a
+of SQL and Gremlin is that for data that is very connected, Base de datos de Gráfos provide a
 very good way to store that data and Gremlin provides a nice and fairly intuitive way
 to traverse that data efficiently.
 
 One other point worthy of note is that every vertex and every edge in a graph has a
 unique ID. Unlike in the relational world where you may or may not decide to give a
-table an ID column this is not optional with Base de datos de Grafos. In some cases the ID
+table an ID column this is not optional with Base de datos de Gráfos. In some cases the ID
 can be a user provided ID but more commonly it will be generated by the graph system
 when a vertex or edge is first created. If you are familiar with SQL, you can think
 of the ID as a primary key of sorts if you want to.  Every vertex and edge can be
-accessed using its ID.  Just as with relational databases, Base de datos de Grafos can be
+accessed using its ID.  Just as with relational databases, Base de datos de Gráfos can be
 indexed and any of the properties contained in a vertex or an edge can be added to
 the index and can be used to find things efficiently. In large graph deployments this
 greatly speeds up the process of finding things as you would expect. We look more
@@ -5017,8 +4930,8 @@ The results produced are the same as before.
 ----
 
 As of TinkerPop 3.3.4 these are not breaking changes. Most if not all TinkerPop
-enabled Base de datos de Grafos continue to support the 'incr' and 'decr' keywords. In fact
-until the majority of Base de datos de Grafos offer support for the new 'asc' and 'desc'
+enabled Base de datos de Gráfos continue to support the 'incr' and 'decr' keywords. In fact
+until the majority of Base de datos de Gráfos offer support for the new 'asc' and 'desc'
 keywords it is likely that the prior ones will keep working. However, be aware that
 at some future date it is possible that the TinkerPop language will discontinue
 support for 'incr' and 'decr' and you will need to use the new 'asc' and 'desc'
@@ -8117,7 +8030,7 @@ g.V().has('region','US-OK').values('code').withIndex()
 ----
 
 NOTE: Note that 'indexed' and 'withIndex' are Groovy methods and not Gremlin
-traversal steps. They will only work using Base de datos de Grafos that allow Groovy code to
+traversal steps. They will only work using Base de datos de Gráfos that allow Groovy code to
 be included as part of a query. 
 
 Here is the same query as before but using 1 as the starting index.
@@ -9377,7 +9290,7 @@ values.
 
 Even if the graph database that you are using does support user provided ID values
 you should check to see what data types can be used for them. All of the examples
-above used LONG values. However, as one example, some Base de datos de Grafos that do allow
+above used LONG values. However, as one example, some Base de datos de Gráfos that do allow
 you to specify custom IDs only support String values. So the key thing is to check
 the documentation before you start building your graph.
 
@@ -12362,7 +12275,7 @@ to want to do as for programmers it feels like the programming they are used to.
 However, there is often, if not always, a pure Gremlin traversal step that can be
 used to do what is needed.  Of course with all rules there are exceptions.   
 
-NOTE: For reasons of security not all Base de datos de Grafos, especially those that are
+NOTE: For reasons of security not all Base de datos de Gráfos, especially those that are
 managed as hosted services, allow lambdas to be included in queries. You should
 always check the documentation for the graph database that you are using.
 
@@ -21968,7 +21881,7 @@ can find that list here http://tinkerpop.apache.org/providers.html.
 
 What is really good to see is that ApacheTinkerpop, and in particular the Gremlin
 query and traversal language, has become one of the primary ways that people are
-building and interacting with, Base de datos de Grafos.
+building and interacting with, Base de datos de Gráfos.
 
 
 [[dockercass]]
